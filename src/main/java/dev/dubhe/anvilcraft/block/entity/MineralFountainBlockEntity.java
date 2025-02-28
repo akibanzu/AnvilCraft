@@ -1,5 +1,6 @@
 package dev.dubhe.anvilcraft.block.entity;
 
+import dev.dubhe.anvilcraft.AnvilCraft;
 import dev.dubhe.anvilcraft.api.heatable.HeatableBlockManager;
 import dev.dubhe.anvilcraft.init.ModBlockEntities;
 import dev.dubhe.anvilcraft.init.ModBlocks;
@@ -41,7 +42,7 @@ public class MineralFountainBlockEntity extends BlockEntity {
     public void tick() {
         if (level == null) return;
         tickCount++;
-        if (tickCount < 20) return;
+        if (tickCount < AnvilCraft.config.mineralFountainBlockTicks) return;
         tickCount = 0;
         BlockState aroundState = getAroundBlock();
         // 冷却检查

@@ -149,6 +149,10 @@ public class AnvilCraftConfig implements ConfigData {
     @Comment("Iono Craft Backpack Max Flight Time in ticks")
     public int ionoCraftBackpackMaxFlightTime = 1200 * 20;
 
+    @ConfigEntry.Gui.Tooltip
+    @Comment("MineralFountainBlock Ticks")
+    public int mineralFountainBlockTicks = 20;
+
     public static class PowerConverter implements ConfigData {
         @Comment("The working interval of power converters")
         @ConfigEntry.Gui.Tooltip
